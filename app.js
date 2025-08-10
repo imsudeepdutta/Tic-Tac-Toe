@@ -19,7 +19,7 @@ const winPatterns = [
 ];
 
 const resetGame = () => {
-  turnO = true;
+  turnX = true;
   count = 0;
   enableBoxes();
   msgContainer.classList.add("hide");
@@ -28,12 +28,14 @@ const resetGame = () => {
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnX) {
-      //playerO
-      box.innerText = "X".= ;
+      //playerX
+      box.innerText = "X";
+      box.style.color = "green";
       turnX = false;
     } else {
-      //playerX
+      //playerO
       box.innerText = "O";
+      box.style.color = "brown";
       turnX = true;
     }
     box.disabled = true;
