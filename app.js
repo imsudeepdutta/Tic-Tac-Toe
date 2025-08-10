@@ -29,7 +29,7 @@ boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnX) {
       //playerO
-      box.innerText = "X";
+      box.innerText = "X".= ;
       turnX = false;
     } else {
       //playerX
