@@ -4,7 +4,7 @@ let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-let turnO = true; //playerX, playerO
+let turnX = true; //playerX, playerO
 let count = 0; //To Track Draw
 
 const winPatterns = [
@@ -27,14 +27,14 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
-    if (turnO) {
+    if (turnX) {
       //playerO
-      box.innerText = "O";
-      turnO = false;
+      box.innerText = "X";
+      turnX = false;
     } else {
       //playerX
-      box.innerText = "X";
-      turnO = true;
+      box.innerText = "O";
+      turnX = true;
     }
     box.disabled = true;
     count++;
